@@ -10,5 +10,9 @@ def time_shift(x, sample_rate, shift_seconds):
         return np.concatenate([np.zeros(k), x])[:n]
     else:
         k = -k
-        return np.concatenate([x[k:], np.zeros(k)])[:n]
+    return np.concatenate([x[k:], np.zeros(k)])[:n]
+
     
+    
+
+   
