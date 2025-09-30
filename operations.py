@@ -14,5 +14,14 @@ def time_shift(x, sample_rate, shift_seconds):
 
     
     
+# add function for time scale
+def time_scale(x, scale):
+    n = len(x)
+    if n == 0:
+        return x.copy
+    new_len = int(np.floor((n - 1) / scale)) + 1
+    t_old = np.arange(n)
+    t_new = np.arange(new_len)
+    return np.interp(scale * t_new, t_old, x)
 
    
