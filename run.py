@@ -1,18 +1,23 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 #import signals and operations
 from signals import generate_sine_wave, generate_step_function
 from operations import time_shift, time_scale
 
 #plot functions + after operations
-fs = 100 
+fs = 100
 dur = 1.0
 sine = generate_sine_wave(5, dur, fs)
 step = generate_step_function(0.5, dur, fs)
 
 sine_shifted = time_shift(sine, fs, 0.3)
-
 step_scaled  = time_scale(step, 0.2)
+
+#define axes before plotting
+t   = np.arange(len(sine)) / fs
+tp  = np.arange(len(step)) / fs
+tps = np.arange(len(step_scaled)) / fs
 
 plt.figure()
 plt.plot(t, sine, label='sine')
