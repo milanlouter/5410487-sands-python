@@ -1,7 +1,17 @@
 import numpy as np
 
-# add time shift function
+
 def time_shift(x, sample_rate, shift_seconds):
+    """
+    Shifts a signal in time by a given number of seconds.
+    
+    Parameters:
+        x: input signal.
+        sample_rate: sampling rate in samples per second.
+        shift_seconds: amount of time to shift.
+    
+    Returns: the time-shifted signal.
+    """
     n = len(x) 
     k = int(round(shift_seconds * sample_rate))
     if k == 0:
@@ -13,9 +23,16 @@ def time_shift(x, sample_rate, shift_seconds):
     return np.concatenate([x[k:], np.zeros(k)])[:n]
 
     
-    
-# add function for time scale
 def time_scale(x, scale):
+    """
+    Scales a signal in time by a given factor.
+    
+    Parameters:
+        x: input signal.
+        scale: scaling factor.
+        
+    Returns: the time-scaled signal.
+    """
     n = len(x)
     if n == 0:
         return x.copy
