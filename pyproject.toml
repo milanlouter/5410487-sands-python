@@ -1,6 +1,16 @@
-{
- "cells": [],
- "metadata": {},
- "nbformat": 4,
- "nbformat_minor": 5
-}
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "5410487-sands-python"
+version = "0.1.0"
+description = "Python project for generating, transforming, and testing basic signals."
+authors = [
+    {name = "Milan Louter", email = "m.louter@student.tudelft.nl"}
+]
+Readme = "README.md"
+
+dependencies = ["numpy", "matplotlib"] 
+
+
