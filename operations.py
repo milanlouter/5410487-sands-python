@@ -35,7 +35,7 @@ def time_scale(x, scale):
     """
     n = len(x)
     if n == 0:
-        return x.copy
+        return x.copy()
     new_len = int(np.floor((n - 1) / scale)) + 1
     t_old = np.arange(n)
     t_new = np.arange(new_len)
