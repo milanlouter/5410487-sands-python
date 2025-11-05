@@ -20,14 +20,34 @@ The main script that:
 2. Applies shifting to the sine wave and scaling to the step function.
 3. Plots the original and transformed signals.
 
+### test_functions.py
+Contains automated tests for all signal functions using pytest. These verify:
+- correct sine and step generation
+- proper shifting and scaling behaviour 
+
+To run all tests:
+'''bash
+pytest -v
+'''
+
+### pyproject.toml
+Defines project information and dependencies for reproducibility. Contains:
+- Project metadata
+- required libraries
+ 
+
 ## How to use
 1. make sure that python, numpy and matplotlib are installed:
+'''bash
 pip install numpy matplotlib
+'''
 
 2. run the project
+'''bash
 python run.py
+'''
 
 3. the program will open plots:
 - original sine wave and time shifted version
-- origninal step signal and time scaled version
+- original step signal and time scaled version
 
