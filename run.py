@@ -29,4 +29,5 @@ plt.plot(tp, step, label='step')
 plt.plot(tps, step_scaled, ':', label='step scaled')
 plt.legend(); plt.grid(); plt.title('Step function scaled')
 
+plt.show()
 
